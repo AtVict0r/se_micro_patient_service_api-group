@@ -51,8 +51,8 @@ def get_medications(skip: int = 0, limit: int = 100, db: Session = Depends(get_d
     return medications
 
 @app.get("/insurances/", response_model=List[response_models.Insurance])
-def get_insurance(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    insurances = insurance_crud.get_insurance(db, skip=skip, limit=limit)
+def get_insurances(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    insurances = insurance_crud.get_insurances(db, skip=skip, limit=limit)
     return insurances
 
 @app.get("/employees/", response_model=List[response_models.Employee])

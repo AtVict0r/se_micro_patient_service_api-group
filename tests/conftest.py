@@ -25,6 +25,12 @@ def sqlalchemy_mock_config():
             "gender": "male",
             "address": "123 Comedy Lane"
         }
+    ]), ("insurance", [
+        {
+            "id": 1,
+            "provider_name": "UHC",
+            "policy_number": "123456"
+        }
     ])]
 
 @pytest.fixture(scope="module")

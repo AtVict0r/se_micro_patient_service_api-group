@@ -94,3 +94,6 @@ class Insurance (BaseModel):
     provider_name: str
     policy_number: str
     patient_id: int
+
+    class Config:
+        from_attributes = True
